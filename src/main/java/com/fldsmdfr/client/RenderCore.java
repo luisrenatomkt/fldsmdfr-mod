@@ -36,7 +36,7 @@ public class RenderCore extends TileEntitySpecialRenderer<TileEntityFldsmdfr> {
         }
         float s = (float) (1.0 + 0.04 * Math.min(lg, 10.0));
         GlStateManager.scale(s, s, s);
-        GlStateManager.rotate(EnumFacing.getHorizontal(te.facing & 3).getHorizontalAngle(), 0, 1, 0);
+        GlStateManager.rotate((te.facing & 3) * 90.0F, 0, 1, 0);
         GlStateManager.disableTexture2D();
         GlStateManager.disableLighting();
         GlStateManager.disableCull();
